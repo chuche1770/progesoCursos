@@ -1,0 +1,31 @@
+<h1>Cursos que actualmente Tomo:</h1>
+
+<div class="listaCursos">
+  <div *ngFor="let course of courses">
+    <div class="curso">
+      <h2>{{ course.name }}</h2>
+      <p>{{ course.professor }}</p>
+      <p>{{ course.platform }}</p>
+      <p>{{ course.chekPointClass }}</p>
+      <p>{{ course.toDoToday }}</p>
+      <button>Eliminar</button>
+    </div>
+  </div>
+
+  <div class="formulario">
+    <h2>Agrega un nuevo curso</h2>
+    <p>Curso:</p>
+    <input type="text" />
+
+    <p>Profesor:</p>
+    <input type="text" />
+
+    <p>Playaforma:</p>
+    <input type="text" />
+
+    <p>Clase en la que estoy:</p>
+    <input type="number" min="0" max="100" />
+
+    <button>Añadir</button>
+  </div>
+</div>
