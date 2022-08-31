@@ -2,6 +2,12 @@ h1 {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
+.listaCursos {
+  width: 75%;
+  background-color: aliceblue;
+  float: inline-end;
+  margin: auto;
+}
 
 .curso {
   max-width: 340px;
@@ -34,10 +40,10 @@ h1 {
 }
 
 .formulario {
-  max-width: 340px;
+  min-width: 340px;
   max-height: 400px;
 
-  padding: 10px;
+  padding: 20px;
   margin: 20px;
 
   text-align: center;
@@ -59,6 +65,10 @@ h1 {
 }
 .formulario button {
   display: block;
-  margin: 10px 20px;
+  margin: auto;
   padding: 10px 100px;
+}
+
+.num {
+  margin-bottom: 23px;
 }

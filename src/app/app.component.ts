@@ -30,4 +30,8 @@ export class AppComponent {
       toDoToday: false,
     },
   ];
+
+  addCourse(nameC: string, profesor) {
+    this.courses.push();
+  }
 }
