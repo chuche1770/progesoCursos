@@ -1,14 +1,20 @@
 <h1>Cursos que actualmente Tomo:</h1>
 
 <div class="listaCursos">
-  <div *ngFor="let course of courses">
+  <h3 *ngIf="courses.length === 0">
+    Porque no tienes ningun curso? Deberias estar haciendo un curso 🤨😐😑🙄
+  </h3>
+  <div *ngFor="let course of courses; index as i">
     <div class="curso">
       <h2>{{ course.name }}</h2>
-      <p>{{ course.professor }}</p>
-      <p>{{ course.platform }}</p>
-      <p>{{ course.chekPointClass }}</p>
-      <p>{{ course.toDoToday }}</p>
-      <button>Eliminar</button>
+      <p>Profesor: {{ course.professor }}</p>
+      <p>Plataforma de estudio: {{ course.platform }}</p>
+      <p>Numero de clase en la voy: {{ course.chekPointClass }}</p>
+      <!-- <p>{{ course.toDoToday }}</p> -->
+
+      <a>Estudie hoy? </a>
+      <!-- <input type="checkbox" /> -->
+      <button (click)="deleteCourse(i)">Eliminar</button>
     </div>
   </div>
 
@@ -20,14 +26,24 @@
     <p>Profesor:</p>
     <input [(ngModel)]="profesor" type="text" />
 
-    <p>Playaforma:</p>
+    <p>Plataforma:</p>
     <input [(ngModel)]="plataforma" type="text" />
 
     <p>Clase en la que estoy:</p>
     <input [(ngModel)]="chekP" class="num" type="number" min="0" max="100" />
 
-    <button *ngIf="curso === '' || profesor === ''" (click)="addCourse()">
+    <button
+      *ngIf="
+        profesor == '' || curso === '' || plataforma === '' || chekP == 0;
+        else elseBlock
+      "
+      disabled
+    >
       Añadir
     </button>
+
+    <ng-template #elseBlock>
+      <button (click)="addCourse()">Añdir</button>
+    </ng-template>
   </div>
 </div>

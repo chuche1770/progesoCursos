@@ -7,10 +7,10 @@ import { Course } from './course.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  curso: string;
-  profesor: string;
-  plataforma: string;
-  chekP: number;
+  curso: string = '';
+  profesor: string = '';
+  plataforma: string = '';
+  chekP: number = 0;
   toDo: boolean;
 
   courses: Course[] = [
@@ -47,11 +47,15 @@ export class AppComponent {
     };
     this.courses.push(newCourse);
 
-    this.curso = '';
     this.profesor = '';
+    this.curso = '';
     this.plataforma = '';
     this.chekP = 0;
     this.toDo = false;
     // alert(this.newCourse.name);
+  }
+
+  deleteCourse(index: number) {
+    this.courses.splice(index, 1);
   }
 }

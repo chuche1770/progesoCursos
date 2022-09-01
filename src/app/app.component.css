@@ -4,9 +4,14 @@ h1 {
 }
 .listaCursos {
   width: 75%;
-  background-color: aliceblue;
   float: inline-end;
   margin: auto;
+}
+
+.listaCursos h3 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: yellow;
+  text-align: center;
 }
 
 .curso {
@@ -38,6 +43,9 @@ h1 {
   display: block;
   margin: auto;
   padding: 10px 100px;
+}
+.curso input {
+  margin-bottom: 23px;
 }
 
 .formulario {
