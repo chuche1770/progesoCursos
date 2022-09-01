@@ -21,16 +21,23 @@
   <div class="formulario">
     <h2>Agrega un nuevo curso</h2>
     <p>Curso:</p>
-    <input [(ngModel)]="curso" type="text" />
+    <input required [(ngModel)]="curso" #input1="ngModel" type="text" />
 
     <p>Profesor:</p>
-    <input [(ngModel)]="profesor" type="text" />
+    <input required [(ngModel)]="profesor" type="text" />
 
     <p>Plataforma:</p>
-    <input [(ngModel)]="plataforma" type="text" />
+    <input required [(ngModel)]="plataforma" type="text" />
 
     <p>Clase en la que estoy:</p>
-    <input [(ngModel)]="chekP" class="num" type="number" min="0" max="100" />
+    <input
+      required
+      [(ngModel)]="chekP"
+      class="num"
+      type="number"
+      min="0"
+      max="100"
+    />
 
     <button
       *ngIf="
@@ -38,12 +45,13 @@
         else elseBlock
       "
       disabled
+      [style.background]="input1.invalid ? 'red' : 'blue'"
     >
       Añadir
     </button>
 
     <ng-template #elseBlock>
-      <button (click)="addCourse()">Añdir</button>
+      <button (click)="addCourse()">Añadir</button>
     </ng-template>
   </div>
 </div>
