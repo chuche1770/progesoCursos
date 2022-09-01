@@ -15,17 +15,19 @@
   <div class="formulario">
     <h2>Agrega un nuevo curso</h2>
     <p>Curso:</p>
-    <input type="text" />
+    <input [(ngModel)]="curso" type="text" />
 
     <p>Profesor:</p>
-    <input type="text" />
+    <input [(ngModel)]="profesor" type="text" />
 
     <p>Playaforma:</p>
-    <input type="text" />
+    <input [(ngModel)]="plataforma" type="text" />
 
     <p>Clase en la que estoy:</p>
-    <input class="num" type="number" min="0" max="100" />
+    <input [(ngModel)]="chekP" class="num" type="number" min="0" max="100" />
 
-    <button (click)="addCourse()">Añadir</button>
+    <button *ngIf="curso === '' || profesor === ''" (click)="addCourse()">
+      Añadir
+    </button>
   </div>
 </div>

@@ -7,6 +7,12 @@ import { Course } from './course.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  curso: string;
+  profesor: string;
+  plataforma: string;
+  chekP: number;
+  toDo: boolean;
+
   courses: Course[] = [
     {
       name: 'Curso de Fundamentos de Angular',
@@ -31,7 +37,21 @@ export class AppComponent {
     },
   ];
 
-  addCourse(nameC: string, profesor) {
-    this.courses.push();
+  addCourse() {
+    let newCourse: Course = {
+      name: this.curso,
+      professor: this.profesor,
+      platform: this.plataforma,
+      chekPointClass: this.chekP,
+      toDoToday: false,
+    };
+    this.courses.push(newCourse);
+
+    this.curso = '';
+    this.profesor = '';
+    this.plataforma = '';
+    this.chekP = 0;
+    this.toDo = false;
+    // alert(this.newCourse.name);
   }
 }

@@ -11,6 +11,7 @@ h1 {
 
 .curso {
   max-width: 340px;
+  min-width: 340px;
   height: 300px;
 
   padding: 20px;
