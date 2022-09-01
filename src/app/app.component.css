@@ -43,6 +43,8 @@ h1 {
   display: block;
   margin: auto;
   padding: 10px 100px;
+  background-color: yellow;
+  font-size: large;
 }
 .curso input {
   margin-bottom: 23px;
