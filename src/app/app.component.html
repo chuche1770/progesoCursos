@@ -1,4 +1,4 @@
-<h1>Hola pinche putita:</h1>
+<h1>Lista de cursos</h1>
 
 <div class="listaCursos">
   <h3 *ngIf="courses.length === 0">
@@ -45,7 +45,7 @@
         else elseBlock
       "
       disabled
-      [style.background]="input1.invalid ? 'red' : 'blue'"
+      [style.background]="input1.invalid ? 'gray' : ''"
     >
       Añadir
     </button>
@@ -55,3 +55,9 @@
     </ng-template>
   </div>
 </div>
+
+<footer>
+  <div>
+    <p>Hecho por Jesús Parra | Platzi 2022 💚💚</p>
+  </div>
+</footer>

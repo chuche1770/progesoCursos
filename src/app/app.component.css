@@ -83,3 +83,10 @@ h1 {
 .num {
   margin-bottom: 23px;
 }
+
+footer {
+  clear: both;
+  max-width: 100%;
+  min-height: 4em;
+  background-color: rgb(56, 68, 68);
+}
